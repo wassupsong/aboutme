@@ -1,6 +1,6 @@
 import AppRouter from "./Router";
 import Navbar from "./Navbar";
-import { HashRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
 const App = () => {
   return (

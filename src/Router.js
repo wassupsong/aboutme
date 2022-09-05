@@ -7,9 +7,9 @@ import Career from "./Career";
 
 const routes = [
   { path: "/", orderNo: 0, Component: <Home style={{ position: "absoulte" }} /> },
-  { path: "/Skill", orderNo: 1, Component: <Skill style={{ position: "absoulte" }} /> },
+  { path: "/Career", orderNo: 1, Component: <Career style={{ position: "absoulte" }} /> },
   { path: "/Project", orderNo: 2, Component: <Project style={{ position: "absoulte" }} /> },
-  { path: "/Career", orderNo: 3, Component: <Career style={{ position: "absoulte" }} /> },
+  { path: "/Skill", orderNo: 3, Component: <Skill style={{ position: "absoulte" }} /> },
 ];
 
 const AppRouter = () => {

@@ -7,10 +7,8 @@ const Skill = () => {
   const moveContent = (event) => {
     const ctx = event.target.getContext("2d");
     const x = event.clientX - ctx.canvas.offsetLeft;
-    if (x > canvas.current.offsetWidth / 2) {
+    if (x < canvas.current.offsetWidth / 2) {
       navigate("/Project");
-    } else {
-      navigate("/");
     }
   };
   return (
