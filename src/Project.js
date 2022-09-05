@@ -8,9 +8,9 @@ const Project = () => {
     const ctx = event.target.getContext("2d");
     const x = event.clientX - ctx.canvas.offsetLeft;
     if (x > canvas.current.offsetWidth / 2) {
-      navigate("/Skill");
+      navigate("/aboutme/Skill");
     } else {
-      navigate("/Career");
+      navigate("/aboutme/Career");
     }
   };
   return (

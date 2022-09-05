@@ -1,3 +1,18 @@
+@media all and (min-width:320px) {
+	*{font-size: 1rem;}
+}
+@media all and (min-width:768px) {
+	#wrap div{
+		width:50%;
+	}
+	#wrap div:nth-child(5){width:100%;}
+}
+@media all and (min-width:1024px) {
+	#wrap div{
+		width:20%;
+	}
+	#wrap div:nth-child(5){width:20%;}
+}
 
 #root {overflow:hidden;}
 html, body, #root {
@@ -11,14 +26,6 @@ article {
 	position:absolute;
 }
 
-article > h1 {
-	font-size: 4rem;
-	position: relative;
-	top: 20%;
-	left: 70%;
-	transform: translate(-50%, -50%);
-}
-
 .Home {
 	background-image: linear-gradient(135deg,#a6c0fe,#f68084);
 	color: #fff;
@@ -30,19 +37,17 @@ article > h1 {
 	position: absolute;
 }
 .Home > h1 {
-	font-size: 4rem;
+	font-size: 4vw;
 	position: relative;
-	top: 15%;
-	left: 70%;
-	transform: translate(-50%, -50%);
+	top:12vh;
+	width: 50vw;
 	animation: slideLeft 1.5s forwards;
   opacity: 0;
-  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .Career {
 	background-image: linear-gradient(135deg,#f68084,#a6c0fe);
 	color:#fff;
-	clip-path: polygon(15% 0%, 85% 0%, 100% 100%, 15% 100%, 0 0);
+	clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 15% 100%, 0 0);
 }
 .Career > canvas {
 	width: 100%;
@@ -50,16 +55,16 @@ article > h1 {
 	position: absolute;
 }
 .Career > h1 {
-	font-size: 4rem;
+	font-size: 4vw;
 	position: relative;
-	top: 15%;
-	left: 70%;
-	transform: translate(-50%, -50%);
+	top:12vh;
+	left:20vw;
+	width: 50vw;
 }
 .Project {
 	background-image: linear-gradient(135deg,#a6c0fe,#f68084);
 	color: #fff;
-	clip-path: polygon(15% 0%, 85% 0%, 100% 100%, 15% 100%, 0 0);
+	clip-path: polygon(0% 0%, 85% 0%, 100% 100%, 85% 100%, 0% 100%);
 }
 .Project > canvas {
 	width: 100%;
@@ -67,11 +72,11 @@ article > h1 {
 	position: absolute;
 }
 .Project > h1 {
-	font-size: 4rem;
+	font-size: 4vw;
 	position: relative;
-	top: 15%;
-	left: 70%;
-	transform: translate(-50%, -50%);
+	top:12vh;
+	left:20vw;
+	width: 50vw;
 }
 .Skill {
 	background-image: linear-gradient(135deg,#f68084,#a6c0fe);
@@ -79,11 +84,11 @@ article > h1 {
 	clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 15% 100%, 0 0);
 }
 .Skill > h1 {
-	font-size: 4rem;
+	font-size: 4vw;
 	position: relative;
-	top: 15%;
-	left: 70%;
-	transform: translate(-50%, -50%);
+	top:12vh;
+	left:20vw;
+	width: 50vw;
 }
 .Skill > canvas {
 	width: 100%;
@@ -96,22 +101,27 @@ article > h1 {
   height: calc(var(--vh, 1vh) * 100);
   width: 100vw;
 }
-.fade-enter {
-  opacity: 0;
+.slideRight-enter {
+  z-index:1;
+  opacity: 0.9;
+  transform: translate3d(100%, 0,0);
 }
 
-.fade-enter-active {
+.slideRight-enter-active {
   opacity: 1;
-  transition: opacity 1000ms ease-in-out;
+  transform: translate3d(0, 0,0);
+  transition: all 500ms;
 }
 
-.fade-exit {
+.slideRight-exit {
   opacity: 1;
+  transform: translate3d(0, 0,0);
 }
 
-.fade-exit-active {
-  opacity: 0;
-  transition: opacity 1000ms ease-in-out;
+.slideRight-exit-active {
+	opacity: 0.9;
+  transition: all 900ms;
+	transform: translate3d(-100%, 0,0);
 }
 
 @keyframes slideLeft {
@@ -121,7 +131,7 @@ article > h1 {
   } 
   to {
 		opacity: 1;
-    transform: translateX(-50%);
+    transform: translateX(20vw);
   }
 }
 
