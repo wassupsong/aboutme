@@ -6,13 +6,13 @@ const Navbar = () => {
   useEffect(() => {
     const curPage = location.pathname;
     const link = document.querySelectorAll("a");
-    if (curPage === "/aboutme/" || curPage === "/aboutme") link[0].style.backgroundImage = "linear-gradient(135deg,#a6c0fe,#f68084)";
+    if (curPage === "/aboutme/" || curPage === "/aboutme") link[0].style.backgroundImage = "linear-gradient(to right, #868f96 0%, #596164 100%)";
     else link[0].style.backgroundImage = "none";
-    if (curPage === "/aboutme/Career") link[1].style.backgroundImage = "linear-gradient(135deg,#f68084,#a6c0fe)";
+    if (curPage === "/aboutme/Career") link[1].style.backgroundImage = "linear-gradient(to right, #868f96 0%, #596164 100%)";
     else link[1].style.backgroundImage = "none";
-    if (curPage === "/aboutme/Project") link[2].style.backgroundImage = "linear-gradient(135deg,#a6c0fe,#f68084)";
+    if (curPage === "/aboutme/Project") link[2].style.backgroundImage = "linear-gradient(to right, #868f96 0%, #596164 100%)";
     else link[2].style.backgroundImage = "none";
-    if (curPage === "/aboutme/Skill") link[3].style.backgroundImage = "linear-gradient(135deg,#f68084,#a6c0fe)";
+    if (curPage === "/aboutme/Skill") link[3].style.backgroundImage = "linear-gradient(to right, #868f96 0%, #596164 100%)";
     else link[3].style.backgroundImage = "none";
   }, [location]);
   return (
