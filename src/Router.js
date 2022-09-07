@@ -18,7 +18,7 @@ const AppRouter = () => {
   const location = useLocation();
   return (
     <TransitionGroup className="transitions-wrapper">
-      <CSSTransition key={location.pathname} classNames={"fade"} timeout={1000}>
+      <CSSTransition key={location.pathname} classNames={"fade"} timeout={500}>
         <Routes location={location}>
           {routes.map(({ path, Component }) => (
             <Route key={path} path={path} element={Component} />

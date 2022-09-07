@@ -5,7 +5,7 @@ const Navbar = () => {
   const location = useLocation();
 
   return (
-    <nav className="topNavbar">
+    <nav className="navbar">
       <ul>
         <li></li>
         <li></li>

@@ -5,7 +5,7 @@ const Home = () => {
   const navigate = useNavigate();
   const mainContainer = useRef();
   useEffect(() => {
-    document.getElementsByClassName("topNavbar")[0].style.display = "none";
+    document.getElementsByClassName("navbar")[0].style.display = "none";
   }, []);
   const clickCube = (event) => {
     event.stopPropagation();
@@ -126,22 +126,6 @@ const Home = () => {
     resetCareerStyle();
     resetProjectStyle();
     resetSkillStyle();
-  };
-
-  const cubeMouseOver = (event) => {
-    const id = event.target.parentElement.id;
-    if (id === "about") setAboutStyle();
-    if (id === "career") setCareerStyle();
-    if (id === "project") setProjectStyle();
-    if (id === "skill") setSkillStyle();
-  };
-
-  const cubeMouseOut = (event) => {
-    const id = event.target.parentElement.id;
-    if (id === "about") resetAboutStyle();
-    if (id === "career") resetCareerStyle();
-    if (id === "project") resetProjectStyle();
-    if (id === "skill") resetSkillStyle();
   };
 
   return (

@@ -19,7 +19,7 @@ article {
 
 .fade-enter {
   opacity: 0;
-	transition: opacity 1s;
+	transition: opacity .5s;
 }
 
 .fade-enter-active {
@@ -208,26 +208,60 @@ article {
 .Skill {
 	background-color: black;
 }
-
-@keyframes slideLeft {
-	from {
-		opacity: 0;
-    transform: translateX(-200px);
-  } 
-  to {
-		opacity: 1;
-    transform: translateX(20vw);
-  }
+.Career{
+	padding: 5vw;
+}
+.Career *{
+	list-style: none;
+	margin: 0;
+}
+.Career h2 {
+	position:absolute;
+	font-size: 2vw;
+	line-height: 1;
+	color: white;
+	transform: translate(-15vw);
+}
+.Career h2:after {
+	content:"";
+	position:absolute;
+	width: 1.5vw; 
+	height: 1.5vw; 
+	border-radius: 100%;
+	background:white; 
+	border: 5px solid white;
+	box-sizing: border-box;
+	transform: translate(4.8vw);
 }
 
-@keyframes slideRight {
-	from {
-		opacity: 0;
-    transform: translateX(200px);
-  } 
-  to {
-		opacity: 1;
-    transform: translateX(20vw);
-  }
+.Career div {
+	position: relative;
+	margin-left: 15vw;
+}
+.Career div:before { 
+	content:""; 
+	position:absolute; 
+	transform: translate(-2vw); 
+	width: 2px; 
+	height: 100%;
+	background:white;
 }
 
+
+.Career ol { 
+	padding-bottom: 3vw;
+}
+.Career li {
+	font-size: 2vw; 
+	color:white; 
+}
+
+@keyframes fade {
+	from {
+		opacity:0;
+	}
+
+	to{
+		opacity:1;
+	}
+}
