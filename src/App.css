@@ -210,32 +210,31 @@ article {
 }
 .Career{
 	padding: 5vw;
+	padding-top: 20vh;	
 }
 .Career *{
 	list-style: none;
 	margin: 0;
 }
-.Career h2 {
+.Career h1 {
+	font-size: 4vw;
+}
+
+.Career h1 span {
+	color: #FFB2D9;
+}
+
+.Career div h2 {
 	position:absolute;
 	font-size: 2vw;
-	line-height: 1;
 	color: white;
 	transform: translate(-15vw);
 }
-.Career h2:after {
-	content:"";
-	position:absolute;
-	width: 1.5vw; 
-	height: 1.5vw; 
-	border-radius: 100%;
-	background:white; 
-	border: 5px solid white;
-	box-sizing: border-box;
-	transform: translate(4.8vw);
-}
+
 
 .Career div {
 	position: relative;
+	margin :5vw;
 	margin-left: 15vw;
 }
 .Career div:before { 
@@ -249,11 +248,12 @@ article {
 
 
 .Career ol { 
-	padding-bottom: 3vw;
 }
 .Career li {
 	font-size: 2vw; 
 	color:white; 
+	padding: 1vw;
+	list-style-type : square
 }
 
 @keyframes fade {
@@ -264,4 +264,59 @@ article {
 	to{
 		opacity:1;
 	}
+}
+
+.navbar {
+	width: 100%;
+	height: 14vh;
+	position: absolute;
+	overflow: hidden;
+	perspective: 1000px;
+  perspective-origin: 50% 50%;
+	z-index: 99;
+}
+
+.navbar_cube {
+  position: absolute;
+	border: none;
+  width: 4vw;
+  height: 4vw;
+  margin: auto;
+  transform-style: preserve-3d;
+  animation: turn 5s linear infinite;
+	top: 4vh;
+	left: 5vw;
+}
+
+.navbar_cube .navbar_square {
+	background-color: white;
+  position: absolute;
+	width: 100%;
+	height: 100%;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.navbar_square:nth-child(1) {
+  transform: rotateY(0deg) translateZ(2vw);
+}
+
+.navbar_square:nth-child(2) {
+  transform: rotateY(180deg) translateZ(2vw);
+}
+
+.navbar_square:nth-child(3) {
+  transform: rotateY(-90deg) translateZ(2vw);
+}
+
+.navbar_square:nth-child(4) {
+  transform: rotateY(90deg) translateZ(2vw);
+}
+
+.navbar_square:nth-child(5) {
+  transform: rotateX(90deg) translateZ(2vw);
+}
+
+.navbar_square:nth-child(6) {
+  transform: rotateX(-90deg) translateZ(2vw);
 }

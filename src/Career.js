@@ -1,15 +1,15 @@
-import { useRef } from "react";
-import { useNavigate } from "react-router-dom";
+
+
 
 const Career = () => {
-  const navigate = useNavigate();
   return (
     <article className="Career">
+      <h1>안녕하세요, 저는 <span>1</span> 년차 웹 개발자 입니다.</h1>
       <div>
         <h2>2021.09</h2>
         <ol>
           <li>엠진 인터렉티브 입사</li>
-          <li>레드캡 기업출장 앱 개발</li>
+          <li>레드캡 기업출장 앱 개발(~2022.08)</li>
         </ol>
       </div>
       <div>
