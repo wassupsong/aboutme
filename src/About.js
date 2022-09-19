@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 const About = () => {
   useEffect(() => {
-    document.getElementsByClassName("navbar")[0].style.display = "block";
+    document.getElementsByClassName("navbar")[0].style.display = "flex";
   }, []);
   return (
     <article className="About">

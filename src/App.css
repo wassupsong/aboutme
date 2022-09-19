@@ -9,6 +9,8 @@ article {
 	height: 100%;
 	position:absolute;
 	color: white;
+	padding-top:10vw;
+	padding-left:10vw;
 }
 
 .transitions-wrapper{
@@ -50,6 +52,25 @@ article {
 	top: 2%;
 	padding : 5vw;
 	text-align: center;
+	-webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+	clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+	transform: translateY(-50px);
+	opacity: 0;
+	animation: titleAnimation 2s forwards;
+}
+@keyframes titleAnimation {
+	0% {
+		transform: translateY(-50px);
+		opacity: 0;
+		-webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+		clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+	}
+	100% {
+			transform: translateY(0);
+			opacity: 1;
+			-webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+			clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+	}
 }
 
 .Home {
@@ -179,7 +200,7 @@ article {
 	top: 50%;
 	left:50%;
 }
-.home_container > div:nth-child(1):hover{
+/* .home_container > div:nth-child(1):hover{
 	top: -30%;
 	left: -30%;
 }
@@ -194,7 +215,7 @@ article {
 .home_container > div:nth-child(4):hover{
 	top: 80%;
 	left: 80%;
-}
+} */
 
 .About {
 	background-color: black;
@@ -208,23 +229,66 @@ article {
 .Skill {
 	background-color: black;
 }
-.Career{
-	padding: 5vw;
-	padding-top: 20vh;	
-}
+
 .Career *{
 	list-style: none;
 	margin: 0;
 }
-.Career h1 {
+.Career > h1 {
 	font-size: 4vw;
+	opacity: 0;
 }
 
-.Career h1 span {
+.Career > h1 > ul {
+	padding: 0;
+	display:inline-block;
+	overflow:hidden;
+	width: 7vw;
+	height: 8vw;
+}
+.Career > h1 > ul > li{
+	padding: 0;
+	text-align: center;
+	vertical-align: bottom;
 	color: #FFB2D9;
+	list-style: none;
+	font-size: 7vw;
+	width: 100%;
+	height:100%;
+	animation: slideup 3s forwards;
 }
 
-.Career div h2 {
+@keyframes slideup {
+	from {
+		transform:translateY(0)
+	}
+	to{
+		transform:translateY(-88vw);
+	}
+}
+
+@keyframes slideRightFadeIn {
+	from {
+		opacity: 0;
+		transform:translate(-10vw);
+	}
+	to{
+		opacity: 1;
+		transform:translate(0)
+	}
+}
+@keyframes slideLeftFadeIn {
+	from {
+		opacity: 0;
+		transform:translate(10vw);
+	}
+	to{
+		opacity: 1;
+		transform:translate(0);
+	}
+}
+
+.Career > div > h2 {
 	position:absolute;
 	font-size: 2vw;
 	color: white;
@@ -232,12 +296,13 @@ article {
 }
 
 
-.Career div {
+.Career > div {
 	position: relative;
 	margin :5vw;
 	margin-left: 15vw;
+	opacity: 0;
 }
-.Career div:before { 
+.Career > div:before { 
 	content:""; 
 	position:absolute; 
 	transform: translate(-2vw); 
@@ -256,19 +321,9 @@ article {
 	list-style-type : square
 }
 
-@keyframes fade {
-	from {
-		opacity:0;
-	}
-
-	to{
-		opacity:1;
-	}
-}
-
 .navbar {
 	width: 100%;
-	height: 14vh;
+	height: 10vw;
 	position: absolute;
 	overflow: hidden;
 	perspective: 1000px;
@@ -284,8 +339,8 @@ article {
   margin: auto;
   transform-style: preserve-3d;
   animation: turn 5s linear infinite;
-	top: 4vh;
-	left: 5vw;
+	top: 3vw;
+	left: 8vw;
 }
 
 .navbar_cube .navbar_square {
@@ -320,3 +375,5 @@ article {
 .navbar_square:nth-child(6) {
   transform: rotateX(-90deg) translateZ(2vw);
 }
+
+

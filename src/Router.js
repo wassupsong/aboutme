@@ -1,5 +1,6 @@
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { Routes, Route, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 import Home from "./Home";
 import Skill from "./Skill";
 import Project from "./Project";
