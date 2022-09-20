@@ -3,13 +3,14 @@ html, body, #root {
 	height: 100%;
 	margin: 0;
 	overflow:hidden;
+	background-color: #E2E2E2;
 }
 article {
 	width: 100%;
 	height: 100%;
 	position:absolute;
-	color: white;
-	padding-top:10vw;
+	color: #E2E2E2;
+	padding-top:13vh;
 	padding-left:10vw;
 }
 
@@ -99,8 +100,8 @@ article {
 	position: absolute;
 	justify-content: center;
   align-items:center;
-	color:white;
-	background-color: black;
+	color:#E2E2E2;
+	background-color: #1b1d20;
 }
 
 .text_container:nth-child(1){
@@ -140,11 +141,11 @@ article {
 }
 
 .cube .square {
-	background-color: black;
+	background-color: #1b1d20;
   position: absolute;
 	width: 100%;
 	height: 100%;
-  border: 1px solid white;
+  border: 1px solid #E2E2E2;
   text-align: center;
 }
 
@@ -218,16 +219,16 @@ article {
 } */
 
 .About {
-	background-color: black;
+	background-color: #1b1d20;
 }
 .Career {
-	background-color: black;
+	background-color: #1b1d20;
 }
 .Project {
-	background-color: black;
+	background-color: #1b1d20;
 }
 .Skill {
-	background-color: black;
+	background-color: #1b1d20;
 }
 
 .Career *{
@@ -235,7 +236,7 @@ article {
 	margin: 0;
 }
 .Career > h1 {
-	font-size: 4vw;
+	font-size: 3vw;
 	opacity: 0;
 }
 
@@ -244,7 +245,7 @@ article {
 	display:inline-block;
 	overflow:hidden;
 	width: 7vw;
-	height: 8vw;
+	height: 5vw;
 }
 .Career > h1 > ul > li{
 	padding: 0;
@@ -252,7 +253,7 @@ article {
 	vertical-align: bottom;
 	color: #FFB2D9;
 	list-style: none;
-	font-size: 7vw;
+	font-size: 5vw;
 	width: 100%;
 	height:100%;
 	animation: slideup 3s forwards;
@@ -263,7 +264,7 @@ article {
 		transform:translateY(0)
 	}
 	to{
-		transform:translateY(-88vw);
+		transform:translateY(-56vw);
 	}
 }
 
@@ -291,7 +292,7 @@ article {
 .Career > div > h2 {
 	position:absolute;
 	font-size: 2vw;
-	color: white;
+	color: #E2E2E2;
 	transform: translate(-15vw);
 }
 
@@ -308,72 +309,121 @@ article {
 	transform: translate(-2vw); 
 	width: 2px; 
 	height: 100%;
-	background:white;
+	background:#E2E2E2;
 }
 
 
 .Career ol { 
 }
 .Career li {
-	font-size: 2vw; 
-	color:white; 
+	font-size: 1.5vw; 
+	color:#E2E2E2; 
 	padding: 1vw;
 	list-style-type : square
 }
 
 .navbar {
 	width: 100%;
-	height: 10vw;
+	height: 13vh;
 	position: absolute;
 	overflow: hidden;
 	perspective: 1000px;
   perspective-origin: 50% 50%;
-	z-index: 99;
+	z-index: 9999;
 }
 
 .navbar_cube {
   position: absolute;
 	border: none;
-  width: 4vw;
-  height: 4vw;
+  width: 5vh;
+  height: 5vh;
   margin: auto;
   transform-style: preserve-3d;
   animation: turn 5s linear infinite;
-	top: 3vw;
+	top: 5vh;
 	left: 8vw;
 }
 
 .navbar_cube .navbar_square {
-	background-color: white;
+	background-color: #E2E2E2;
   position: absolute;
 	width: 100%;
 	height: 100%;
-  border: 1px solid black;
+  border: 1px solid #1b1d20;
   text-align: center;
 }
 
 .navbar_square:nth-child(1) {
-  transform: rotateY(0deg) translateZ(2vw);
+  transform: rotateY(0deg) translateZ(2.5vh);
 }
 
 .navbar_square:nth-child(2) {
-  transform: rotateY(180deg) translateZ(2vw);
+  transform: rotateY(180deg) translateZ(2.5vh);
 }
 
 .navbar_square:nth-child(3) {
-  transform: rotateY(-90deg) translateZ(2vw);
+  transform: rotateY(-90deg) translateZ(2.5vh);
 }
 
 .navbar_square:nth-child(4) {
-  transform: rotateY(90deg) translateZ(2vw);
+  transform: rotateY(90deg) translateZ(2.5vh);
 }
 
 .navbar_square:nth-child(5) {
-  transform: rotateX(90deg) translateZ(2vw);
+  transform: rotateX(90deg) translateZ(2.5vh);
 }
 
 .navbar_square:nth-child(6) {
-  transform: rotateX(-90deg) translateZ(2vw);
+  transform: rotateX(-90deg) translateZ(2.5vh);
 }
 
+.navbar_menu {
+position: relative;
+}
 
+.navbar_menu ul {
+	padding: 0;
+  transform: translate(-79%);
+}
+
+.navbar_menu ul li {
+	display: block;
+  margin: 1vw;
+  background: white;
+  text-align: right;
+  padding: 10px;
+  border-radius: 0 30px 30px 0;
+	transition: all 1s;
+}
+
+.navbar_menu ul li:hover{
+	transform: translate(50%);
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.navbar_menu ul li:hover a {
+	color: #000;
+}
+.navbar_menu ul li:hover svg {
+	color: #fff;
+  background: rgba(0, 0, 0, 0.36);
+  transform: rotate(360deg);
+  transition: all 1s;
+}
+.navbar_menu ul li svg {
+	margin-left: 10px;
+  color: #000;
+  background: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  background: #ffffff;
+  transform: rotate(0deg);
+}
+
+.navbar_menu a {
+	color: #fff;
+  text-decoration: none;
+}

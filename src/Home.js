@@ -46,8 +46,8 @@ const Home = () => {
     about.style.top = "-30%";
     about.style.left = "-30%";
     for (let i = 0; i < about.children.length; i++) {
-      about.children[i].style.backgroundColor = "white";
-      about.children[i].style.border = "black 1px solid";
+      about.children[i].style.backgroundColor = "#E2E2E2";
+      about.children[i].style.border = "#1b1d20 1px solid";
     }
   };
 
@@ -56,8 +56,8 @@ const Home = () => {
     about.style.top = "0%";
     about.style.left = "0%";
     for (let i = 0; i < about.children.length; i++) {
-      about.children[i].style.backgroundColor = "black";
-      about.children[i].style.border = "white 1px solid";
+      about.children[i].style.backgroundColor = "#1b1d20";
+      about.children[i].style.border = "#E2E2E2 1px solid";
     }
   };
 
@@ -66,8 +66,8 @@ const Home = () => {
     career.style.top = "-30%";
     career.style.left = "80%";
     for (let i = 0; i < career.children.length; i++) {
-      career.children[i].style.backgroundColor = "white";
-      career.children[i].style.border = "black 1px solid";
+      career.children[i].style.backgroundColor = "#E2E2E2";
+      career.children[i].style.border = "#1b1d20 1px solid";
     }
   };
   const resetCareerStyle = () => {
@@ -75,8 +75,8 @@ const Home = () => {
     career.style.top = "0%";
     career.style.left = "50%";
     for (let i = 0; i < career.children.length; i++) {
-      career.children[i].style.backgroundColor = "black";
-      career.children[i].style.border = "white 1px solid";
+      career.children[i].style.backgroundColor = "#1b1d20";
+      career.children[i].style.border = "#E2E2E2 1px solid";
     }
   };
   const setProjectStyle = () => {
@@ -84,8 +84,8 @@ const Home = () => {
     project.style.top = "80%";
     project.style.left = "-30%";
     for (let i = 0; i < project.children.length; i++) {
-      project.children[i].style.backgroundColor = "white";
-      project.children[i].style.border = "black 1px solid";
+      project.children[i].style.backgroundColor = "#E2E2E2";
+      project.children[i].style.border = "#1b1d20 1px solid";
     }
   };
   const resetProjectStyle = () => {
@@ -93,8 +93,8 @@ const Home = () => {
     project.style.top = "50%";
     project.style.left = "0%";
     for (let i = 0; i < project.children.length; i++) {
-      project.children[i].style.backgroundColor = "black";
-      project.children[i].style.border = "white 1px solid";
+      project.children[i].style.backgroundColor = "#1b1d20";
+      project.children[i].style.border = "#E2E2E2 1px solid";
     }
   };
   const setSkillStyle = () => {
@@ -102,8 +102,8 @@ const Home = () => {
     skill.style.top = "80%";
     skill.style.left = "80%";
     for (let i = 0; i < skill.children.length; i++) {
-      skill.children[i].style.backgroundColor = "white";
-      skill.children[i].style.border = "black 1px solid";
+      skill.children[i].style.backgroundColor = "#E2E2E2";
+      skill.children[i].style.border = "#1b1d20 1px solid";
     }
   };
   const resetSkillStyle = () => {
@@ -111,8 +111,8 @@ const Home = () => {
     skill.style.top = "50%";
     skill.style.left = "50%";
     for (let i = 0; i < skill.children.length; i++) {
-      skill.children[i].style.backgroundColor = "black";
-      skill.children[i].style.border = "white 1px solid";
+      skill.children[i].style.backgroundColor = "#1b1d20";
+      skill.children[i].style.border = "#E2E2E2 1px solid";
     }
   };
 
