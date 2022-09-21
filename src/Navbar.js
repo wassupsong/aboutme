@@ -25,17 +25,20 @@ const Navbar = () => {
         <ul>
           <li>
             <a href="#">
-              Github <FaGithub />
+              <p>Github</p>
+              <FaGithub />
             </a>
           </li>
           <li>
             <a href="#">
-              Mail <FaEnvelope />
+              <p>Mail</p>
+              <FaEnvelope />
             </a>
           </li>
           <li>
             <a href="#">
-              Instagram <FaInstagram />
+              <p>Instagram</p>
+              <FaInstagram />
             </a>
           </li>
         </ul>
