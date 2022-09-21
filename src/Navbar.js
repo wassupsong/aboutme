@@ -11,6 +11,13 @@ const Navbar = () => {
   const moveHome = () => {
     navigate("/aboutme/");
   };
+
+  const clickMailBtn = (event) => {
+    event.preventDefault();
+  };
+  const clickInstaBtn = (event) => {
+    event.preventDefault();
+  };
   return (
     <nav className="navbar">
       <div className="navbar_cube" onClick={moveHome}>
@@ -24,19 +31,19 @@ const Navbar = () => {
       <div className="navbar_menu">
         <ul>
           <li>
-            <a href="#">
+            <a href="#" onClick={() => window.open("https://github.com/wassupsong")}>
               <p>Github</p>
               <FaGithub />
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="#" onClick={clickMailBtn}>
               <p>Mail</p>
               <FaEnvelope />
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="#" onClick={clickInstaBtn}>
               <p>Instagram</p>
               <FaInstagram />
             </a>
