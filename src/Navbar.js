@@ -42,11 +42,32 @@ const Navbar = () => {
       document.querySelector("form").style.animation = "none";
     }, 500);
     setFormClass("navbar_mailform");
+    setMailData({
+      from_name: "",
+      from_email: "",
+      from_phone: "",
+      message: "",
+    });
   };
 
   const sendMail = (event) => {
     event.preventDefault();
-    send(process.env.REACT_APP_EMAILJS_SERVICE_ID, "template_y9oe4cd", mailData);
+    if (mailValidation() !== "complete") {
+      alert(mailValidation());
+      return;
+    }
+    document.getElementsByClassName("loading_dimm")[0].style.display = "block";
+    send(process.env.REACT_APP_EMAILJS_SERVICE_ID, "template_y9oe4cd", mailData)
+      .then(() => {
+        document.getElementsByClassName("loading_dimm")[0].style.display = "none";
+        alert("메일이 전송되었습니다. 빠른 시일 내에 답변드리겠습니다! 감사합니다!");
+        closeMailForm();
+      })
+      .catch(() => {
+        document.getElementsByClassName("loading_dimm")[0].style.display = "none";
+        alert("메일 전송에 실패했습니다. 다시 시도해주세요.");
+        closeMailForm();
+      });
   };
 
   const clickInstaBtn = (event) => {
@@ -62,6 +83,15 @@ const Navbar = () => {
       ...mailData,
       [name]: value,
     });
+  };
+
+  const mailValidation = () => {
+    let check = "complete";
+    if (!mailData.message) check = "내용을 입력해주세요!";
+    if (!mailData.from_phone) check = "휴대전화를 입력해주세요!";
+    if (!mailData.from_email) check = "이메일을 입력해주세요!";
+    if (!mailData.from_name) check = "성함을 입력해주세요!";
+    return check;
   };
 
   return (
@@ -101,23 +131,26 @@ const Navbar = () => {
         <h1>Contact Me</h1>
         <form onSubmit={sendMail}>
           <div>
-            <label htmlFor="mailName">Name</label>
+            <label htmlFor="mailName">* 성함</label>
             <input type="text" name="from_name" id="mailName" value={mailData.from_name} onChange={handleChange}></input>
           </div>
           <div>
-            <label htmlFor="mailEmail">Email</label>
+            <label htmlFor="mailEmail">* 이메일</label>
             <input type="text" name="from_email" id="mailEmail" value={mailData.from_email} onChange={handleChange}></input>
           </div>
           <div>
-            <label htmlFor="mailPhone">Phone Number</label>
+            <label htmlFor="mailPhone">* 휴대전화</label>
             <input type="text" name="from_phone" id="mailPhone" value={mailData.from_phone} onChange={handleChange}></input>
           </div>
           <div>
-            <label htmlFor="mailMessage">Message</label>
+            <label htmlFor="mailMessage">* 내용</label>
             <textarea name="message" id="mailMessage" value={mailData.message} onChange={handleChange}></textarea>
           </div>
-          <button type="submit">보내기</button>
+          <button type="submit">메일 보내기</button>
         </form>
+      </div>
+      <div className="loading_dimm">
+        <h2>Loading...</h2>
       </div>
     </nav>
   );
