@@ -323,6 +323,24 @@ article {
 	list-style-type : square
 }
 
+@media (max-width:920px){
+	.navbar_menu ul li p {
+		height: 7vh;
+		writing-mode: vertical-rl;
+		text-orientation: mixed;
+		margin-top: 2.5vh;
+		margin-bottom: 2vh;
+	}
+
+	.navbar_menu ul li {
+		height: 15vh;
+	}
+
+	.navbar_menu{
+		top: -75%;
+	}
+}
+
 .navbar {
 	width: 100%;
 	height: 13vh;
@@ -443,20 +461,172 @@ article {
   text-decoration: none;
 }
 
-@media (max-width:920px){
-	.navbar_menu ul li p {
-		height: 7vh;
-		writing-mode: vertical-rl;
-		text-orientation: mixed;
-		margin-top: 2.5vh;
-		margin-bottom: 2vh;
+.navbar_mailform_dimm{
+	position: absolute;
+	opacity: .8;
+	background-color: black;
+	width: 100vw;
+	height: 100vh;
+	display: none;
+}
+
+.navbar_mailform {
+	position: absolute;
+	width: 80vw;
+	height: 80vh;
+	left: 50%;
+	top: 100%;
+  transform: translate(-50%, 10%);
+	display: none;
+	color: white;
+}
+
+.navbar_mailform form {
+	position: absolute;
+	margin: 0 auto;
+	width: 100%;
+	height: 70%;
+	top: 20%;
+	opacity: 0;
+}
+
+.navbar_mailform form div {
+	padding: 2vw;
+	width: 40%;
+	height: 10vh;
+}
+
+.navbar_mailform h1 {
+	font-size: 4vw;
+	width: 100%;
+	height: 10%;
+	margin: 0;
+	text-align: center;
+	padding: 3vw;
+}
+
+.navbar_mailform form div input {
+	width: 100%;
+	height: 100%;
+	background: inherit;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 2px white solid;
+	color: white;
+	font-size: 2.5vw;
+	margin-top: 1vw;
+}
+
+.navbar_mailform form div label {
+	width: 100%;
+	float: left;
+	font-size: 1vw;
+}
+
+.navbar_mailform form div:nth-child(4){
+	position: absolute;
+	top: 0;
+	left: 50%;
+	height: 30vh;
+}
+
+.navbar_mailform form div textarea {
+	width: 100%;
+	height: 100%;
+	border: 2px white solid;
+	background-color: inherit;
+	font-size: 2.5vw;
+	margin-top: 1vw;
+	color: white;
+}
+
+.navbar_mailform form button {
+	
+}
+
+.navbar_mailform:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 2px;
+  background: linear-gradient(120deg, #00F260, #0575E6, #00F260);
+  background-size: 300% 300%;
+  clip-path: polygon(0% 100%, 3px 100%, 3px 3px, calc(100% - 3px) 3px, calc(100% - 3px) calc(100% - 3px), 3px calc(100% - 3px), 3px 100%, 100% 100%, 100% 0%, 0% 0%);
+}
+
+.navbar_mailform.in:after {
+  animation: frame-enter 1.5s forwards ease-in-out reverse, gradient-animation 4s ease-in-out infinite;
+}
+
+/* motion */
+@keyframes gradient-animation {
+  0% {
+    background-position: 15% 0%;
+  }
+  50% {
+    background-position: 85% 100%;
+  }
+  100% {
+    background-position: 15% 0%;
+  }
+}
+
+@keyframes frame-enter {
+  0% {
+    clip-path: polygon(0% 100%, 3px 100%, 3px 3px, calc(100% - 3px) 3px, calc(100% - 3px) calc(100% - 3px), 3px calc(100% - 3px), 3px 100%, 100% 100%, 100% 0%, 0% 0%);
+  }
+  25% {
+    clip-path: polygon(0% 100%, 3px 100%, 3px 3px, calc(100% - 3px) 3px, calc(100% - 3px) calc(100% - 3px), calc(100% - 3px) calc(100% - 3px), calc(100% - 3px) 100%, 100% 100%, 100% 0%, 0% 0%);
+  }
+  50% {
+    clip-path: polygon(0% 100%, 3px 100%, 3px 3px, calc(100% - 3px) 3px, calc(100% - 3px) 3px, calc(100% - 3px) 3px, calc(100% - 3px) 3px, calc(100% - 3px) 3px, 100% 0%, 0% 0%);
+  }
+  75% {
+    -webkit-clip-path: polygon(0% 100%, 3px 100%, 3px 3px, 3px 3px, 3px 3px, 3px 3px, 3px 3px, 3px 3px, 3px 0%, 0% 0%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0% 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 0% 100%);
+  }
+}
+
+@keyframes frame-exit {
+  0% {
+    clip-path: polygon(0% 100%, 3px 100%, 3px 3px, calc(100% - 3px) 3px, calc(100% - 3px) calc(100% - 3px), 3px calc(100% - 3px), 3px 100%, 100% 100%, 100% 0%, 0% 0%);
+  }
+  25% {
+    clip-path: polygon(0% 100%, 3px 100%, 3px 3px, calc(100% - 3px) 3px, calc(100% - 3px) calc(100% - 3px), calc(100% - 3px) calc(100% - 3px), calc(100% - 3px) 100%, 100% 100%, 100% 0%, 0% 0%);
+  }
+  50% {
+    clip-path: polygon(0% 100%, 3px 100%, 3px 3px, calc(100% - 3px) 3px, calc(100% - 3px) 3px, calc(100% - 3px) 3px, calc(100% - 3px) 3px, calc(100% - 3px) 3px, 100% 0%, 0% 0%);
+  }
+  75% {
+    -webkit-clip-path: polygon(0% 100%, 3px 100%, 3px 3px, 3px 3px, 3px 3px, 3px 3px, 3px 3px, 3px 3px, 3px 0%, 0% 0%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0% 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 0% 100%);
+  }
+}
+
+@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+
+		to {
+			opacity: 1;
+		}
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 1;
 	}
 
-	.navbar_menu ul li {
-		height: 15vh;
-	}
-
-	.navbar_menu{
-		top: -75%;
+	to {
+		opacity: 0;
 	}
 }
